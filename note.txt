@@ -1,0 +1,5 @@
+// run these two commands, otherwise academic theme will not be fetched on clone
+git submodule init
+git submodule fetch
+
+// probably unnecessary for pulls
