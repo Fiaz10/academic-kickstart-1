@@ -10,31 +10,24 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "Neural Networks",
+    "Machine Learning",
+    "Applied Mathematics"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
-  year = 2012
+  course = "B.S. Mathematics, Computer Science"
+  institution = "The University of Texas at Dallas"
+  year = 2021
 
 [[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
-
-[[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
+  course = "International Baccalaureate Diploma"
+  institution = "Westwood High School"
+  year = 2017
  
 +++
 
 # Biography
 
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+Siddartha Devic is a sophomore at The University of Texas at Dallas (UTD). He is currently a member of the [Advanced Network Research Lab](https://anrlutdallas.github.io/), and also works with various professors on campus. He enjoys coding in his free time, but usually resorts to reading, practicing piano, or procrastinating.
