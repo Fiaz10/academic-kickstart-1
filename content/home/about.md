@@ -12,7 +12,7 @@ weight = 5
   interests = [
     "Neural Networks",
     "Machine Learning",
-    "Applied Mathematics"
+    "Convex Optimization"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -28,6 +28,13 @@ weight = 5
  
 +++
 
-# Biography
+# **Biography**
 
-Siddartha Devic is a sophomore at The University of Texas at Dallas (UTD). He is currently a member of the [Advanced Network Research Lab](https://anrlutdallas.github.io/), and also works with various professors on campus. He enjoys coding in his free time, but usually resorts to reading, practicing piano, or procrastinating.
+I'm Sid, and somehow I'm already a junior at The University of Texas at Dallas (UTD). I'm currently a member of the [Advanced Network Research Lab](https://anrlutdallas.github.io/), and also work with Prof. Nicholas Ruozzi on various research projects related to machine learning and optimization.
+
+In my free time, I enjoy reading, catching up on developments in computational go (LeelaZero, MiniGo), [practicing classical piano](https://www.youtube.com/watch?v=yH61fMrFpGs), cooking, or [getting involved on campus](https://www.acmutd.co/team.html).
+
+
+## **News**
+* (7/20/2019) Our paper "[DeepPR](https://arxiv.org/abs/1904.11533)" was accepted at IEEE Globecom 2019.
+* (5/1/2019) I will be spending the summer at Johns Hopkins [Applied Physics Labs](https://www.jhuapl.edu/), doing machine learning research with their Machine Perception group.

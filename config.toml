@@ -6,7 +6,7 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
+baseurl = "http://sid.devic.us/"
 
 # Title of your site
 title = "Sid Devic"
@@ -26,7 +26,7 @@ paginate = 10
 disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-143360517-1"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -34,7 +34,7 @@ hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 
 # Get last modified date for content from Git?
-enableGitInfo = false
+enableGitInfo = true
 
 [outputs]
   home = [ "HTML", "CSS", "RSS" ]
@@ -229,12 +229,15 @@ enableGitInfo = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:sid.devic@utd.edu"
-
-#  [[params.social]]
-#    icon = "twitter"
-#    icon_pack = "fa"
-#    link = "//twitter.com/GeorgeCushen"
+    link = "mailto:sid.devic@utdallas.edu"
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    link = "https://www.linkedin.com/in/sid-devic/"
+  [[params.social]]
+    icon = "twitter"
+    icon_pack = "fa"
+    link = "//twitter.com/sid_devic"
 
 # when I get good :(
   #[[params.social]]
@@ -249,10 +252,15 @@ enableGitInfo = false
 
   # Link to a PDF of your resume/CV from the About widget.
   # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-   [[params.social]]
-     icon = "cv"
-     icon_pack = "ai"
-     link = "files/cv.pdf"
+   #[[params.social]]
+   #  icon = "cv"
+   #  icon_pack = "ai"
+   #  link = "files/cv.pdf"
+
+   #[[params.social]]
+   #  icon = "acm"
+   #  icon_pack = "ai"
+   #  link = "http://acmutd.co"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -267,20 +275,25 @@ enableGitInfo = false
   url = "#about"
   weight = 1
 
-#[[menu.main]]
-#  name = "Publications"
-#  url = "#publications_selected"
-#  weight = 2
+[[menu.main]]
+  name = "Publications"
+  url = "#publications_selected"
+  weight = 2
+
+[[menu.main]]
+  name = "Talks & Posters"
+  url = "#talks"
+  weight = 2
 
 [[menu.main]]
   name = "Posts"
   url = "#posts"
-  weight = 3
+  weight = 4
 
 [[menu.main]]
   name = "Projects"
   url = "#projects"
-  weight = 4
+  weight = 5
 
 #[[menu.main]]
 #  name = "Teaching"

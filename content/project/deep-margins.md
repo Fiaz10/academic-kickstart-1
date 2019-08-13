@@ -8,7 +8,7 @@ draft = false
 tags = ["machine-learning", "research", "deep-learning"]
 
 # Project summary to display on homepage.
-summary = "Attempting to increase decision margins in neural networks through techniques similar to margin maximization in SVMs. Mentored by Prof. Nicholas Ruozzi, UTD."
+summary = "Attempting to increase decision margins in neural networks through techniques similar to margin maximization in SVMs. Mentored by Prof. Nicholas Ruozzi, UTD. Python, Tensorflow, open-cv, _alot of_ bash."
 
 # Optional image to display on homepage.
 image_preview = "margins.png"
@@ -64,11 +64,11 @@ Now that the intuition behind margin maximization has been described, we may foc
 
 One way to guarantee that the margin will increase in a neural network is to add new data points which the network will use to learn and then to classify correctly, as in the training phase of a network, the goal is to classify every image correctly.
 
-As an aside, a point lies in 2-d space and an image resides in n-dimensional space. A point has a $(x,y)$ coordinate, and since our images have dimensions 32 x 32 x 3, we can consider them as points in their n-dimensional space.
+As an aside, a point lies in 2-d space and an image resides in n-dimensional space. A point has a $(x,y)$ coordinate, and since our images have dimensions 32 x 32 x 3, we can consider them as points in their $n$-dimensional space.
 
-We can exploit this by giving the network some artificial that we have constructed to learn from. Specifically, we would like to generate fake data points in an n-sphere around every data point that we have, so that our network decision boundary will be pushed out by the radius of that sphere. As shown in [Figure 3], by creating a set of fake data points around the real data, the decision boundary has no choice but to move outward so that it may classify all points correctly during its training phase.
+We can exploit this by giving the network some artificial that we have constructed to learn from. Specifically, we would like to generate fake data points in an $n$-sphere around every data point that we have, so that our network decision boundary will be pushed out by the radius of that sphere. As shown in [Figure 3], by creating a set of fake data points around the real data, the decision boundary has no choice but to move outward so that it may classify all points correctly during its training phase.
 
-![Figure 3](/project/deep-margins/empty.PNG)
+![Figure 3](/project/deep-margins/fig3.png)
 
 We can generate these fake data points uniformly and systematically by sampling randomly from everywhere within an n-sphere of radius r around a given data point. Programmatically, we do this as follows:
 
@@ -76,15 +76,18 @@ We can generate these fake data points uniformly and systematically by sampling 
 2. Populate that matrix with random values.
 3. Normalize the image. In linear algebra, when we wish to obtain a vector pointing in the same direction as another vector but with length 1, we divide each element in the vector by its total magnitude. We can do the same for each image, taking an element-wise magnitude division, so that the “length” of the random matrix is 1.
 4. Now that we have a random point in the same data space as our original image (for example, an image of a cat), we multiply this random point by a random value $m$, where $0 <= m <= r$, and where $r$ is the radius of the sphere within which we would like to generate points. It is important to make sure m is uniformly distributed within the sphere, and not only on the boundary, by drawing $m$ from within a range of values less than $r$.
-5. Finally, we take our new image $g = m*$[random matrix] and add it to our original image using matrix addition. This “localizes” $g$ to the dataspace of our image, not unlike how we move a vector around a 2d-space by adding it to another vector [Figure 4].
+5. Finally, we take our new image $g = m$\*[random matrix] and add it to our original image using matrix addition. This “localizes” $g$ to the dataspace of our image, not unlike how we move a vector around a 2d-space by adding it to another vector [Figure 4].
 
-![Figure 4](/project/deep-margins/figure4.PNG)
+![Figure 3](/project/deep-margins/figure4.png)
 
-We now have a method of generating data points within an n-sphere of radius $r$ of a single image.  For each image in our dataset, we then generate 20 random points within some radius $r$.
+We now have a method of generating data points within an $n$-sphere of radius $r$ of a single image.  For each image in our dataset, we then generate 20 random points within some radius $r$.
 
 How do we choose a suitable radius for our $n$-sphere? Consider the two closest points from opposing classes within data space. That is, the pair of `(dog,cat)` images that have the least distance between them by a $n$-dimensional euclidean distance metric.
 Similar to how we can use the distance formula in two dimensions to compute the planar distance between two points, we can generalize the distance formula to $n$-dimensions, and use it to calculate the distance between any pair of images. We can write a programming script to calculate this $n$-dimensional distance and find the closest pair of images. 
 The maximum value that our final network margin can be is then half of the distance between the closest pair of opposing class points [Figure 5]. As an example, if  the distance between them was calculated as 369,  we begin by setting our radius $r$ to 184.
+
+![Figure 5](/project/deep-margins/fig5.PNG)
+
 
 ### Previous Work
 Previous papers regarding a maximum margin guarantee rely on the construction of an “objective function” which rewards maximized margins. Instead, our work relies on providing a true guarantee of this margin by forcing the network to fit it with fake data.
@@ -101,7 +104,10 @@ By inspecting our list of pairs of euclidean distances, we discover that 99% of 
 
 The results indicate that this method of attempting to improve generalization is not effective. Although there is no way to compute the true “uncertainty” of our results and to measure whether our result is truly improving or degrading final accuracy, we can estimate this uncertainty to be around 2-3%. That is, if we were to increase our accuracy by 4% or more over a 10 run average, this would hold as a “significant result”.
 
+![Figure 6](/project/deep-margins/ValAcc.png)
 ### Conclusion
 The “margin maximization” method of attempting to improve neural network accuracy has proven, in this case, to be unsuccessful. Currently, we are working on numerous other methods in an attempt to provide a “generalization guarantee” during the training of a network. The development of a generalization guarantee would be important because no such guarantee currently exists for neural networks, and it is still a mystery as to why they perform well on unseen data.
 	
 ### References
+
+[1] Oswaldo Ludwig, and Urbano Nunes. "Novel Maximum-Margin Training Algorithms for Supervised Neural Networks." IEEE Transactions on Neural Networks 21, no. 6 (2010): 972-84. doi:10.1109/tnn.2010.2046423.

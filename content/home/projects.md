@@ -34,6 +34,10 @@ filter_default = 0
   tag = "*"
 
 [[filter]]
+  name = "Research"
+  tag = "research"
+
+[[filter]]
   name = "Machine Learning"
   tag = "machine-learning"
 

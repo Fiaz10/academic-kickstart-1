@@ -25,7 +25,7 @@ preview = true
 
 Interpretable neural networks are currently nothing more then a pipe dream. However, if we were to make these machines even partially interpretable, maybe we could learn more about how they work.
 
-One way to look at interpretability is to consider embeddings. Not embeddings like word-2-vec or autoencoders--both of which at some point provide a fixed dimensional representation of data--but visual embeddings. Methods like T-SNE and PCA are common methods to do this, providing an intuitive 2-D / 3-D representation of some data. More specifically, we would like to have both a prediction, and a _visually interpretable_ representation of our prediction in the neural network solution space.
+[ Placeholder ]
 
 Visually interpretable is a broad term. Here is a T-SNE embedding on the MNIST dataset, where 0's, 1's, etc. are clustered in their specified classes:
 ![T-SNE](/img/tsne.png)
