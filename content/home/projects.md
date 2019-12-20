@@ -42,6 +42,10 @@ filter_default = 0
   tag = "machine-learning"
 
 [[filter]]
+  name = "Math"
+  tag = "math"
+
+[[filter]]
   name = "Mobile Development"
   tag = "mobile-development"
 

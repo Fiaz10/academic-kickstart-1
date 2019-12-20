@@ -30,7 +30,7 @@ weight = 5
 
 # **Biography**
 
-I'm Sid, and somehow I'm already a junior at The University of Texas at Dallas (UTD). I'm currently a member of the [Advanced Network Research Lab](https://anrlutdallas.github.io/), and also work with Prof. Nicholas Ruozzi on various research projects related to machine learning and optimization.
+I'm Sid, and somehow I am already a junior at The University of Texas at Dallas (UTD). I am a member of the [Advanced Network Research Lab](https://anrlutdallas.github.io/), and also work with Prof. Nicholas Ruozzi on various research projects related to machine learning and optimization.
 
 In my free time, I enjoy reading, catching up on developments in computational go (LeelaZero, MiniGo), [practicing classical piano](https://www.youtube.com/watch?v=yH61fMrFpGs), cooking, or [getting involved on campus](https://www.acmutd.co/team.html).
 
