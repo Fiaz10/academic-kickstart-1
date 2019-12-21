@@ -8,7 +8,7 @@ draft = false
 tags = ["machine-learning", "math"]
 
 # Project summary to display on homepage.
-summary = "Worked with Ph.D. Dipnil Chakraborty through the book 'The Elements of Statistical Learning'. Culminated in summary paper with case studies on testing and regression."
+summary = "Worked with Ph.D. student Dipnil Chakraborty through the book 'The Elements of Statistical Learning'. Culminated in summary paper with case studies on testing and regression."
 
 # Optional image to display on homepage.
 image_preview = "stat_learn.png"
