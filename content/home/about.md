@@ -34,6 +34,7 @@ I'm Sid, and somehow I am already a junior at The University of Texas at Dallas 
 
 In my free time, I enjoy reading, catching up on developments in computational go (LeelaZero, MiniGo), [practicing classical piano](https://www.youtube.com/watch?v=yH61fMrFpGs), cooking, or [getting involved on campus](https://www.acmutd.co/team.html).
 
+You can find my CV [here](files/cv.pdf).
 
 ## **News**
 * (7/20/2019) Our paper "[DeepPR](https://arxiv.org/abs/1904.11533)" was accepted at IEEE Globecom 2019.
